@@ -1,0 +1,7 @@
+pystray
+Pillow
+requests
+bs4
+lxml
+pywin32
+win11toast
