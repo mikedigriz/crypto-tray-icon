@@ -76,7 +76,13 @@ def notify_send(text: str, url="", icon=None):
                 "content": "Закрыть",
             },
         ]
-        toast("Курс", f"{text}", buttons=buttons, icon=icon)
+        toast(
+            "Курс",
+            f"{text}",
+            buttons=buttons,
+            icon=icon,
+            on_dismissed=lambda *args: None,
+        )
     else:
         toast(
             "Курс",
@@ -87,6 +93,7 @@ def notify_send(text: str, url="", icon=None):
                 "content": "Закрыть",
             },
             icon=icon,
+            on_dismissed=lambda *args: None,
         )
 
 
